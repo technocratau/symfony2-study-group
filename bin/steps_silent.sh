@@ -6,3 +6,5 @@ cd lantern/
 
 # Step 2. Generate LMS bundle
 php app/console generate:bundle --namespace=Technocrat/LMSBundle --format=yml --no-interaction
+
+# Step 3. Disable local check and modify twig template
