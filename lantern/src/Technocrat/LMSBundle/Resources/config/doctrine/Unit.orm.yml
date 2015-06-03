@@ -1,0 +1,21 @@
+Technocrat\LMSBundle\Entity\Unit:
+    type: entity
+    table: null
+    repositoryClass: Technocrat\LMSBundle\Entity\UnitRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        title:
+            type: string
+            length: '255'
+        number:
+            type: integer
+            length: null
+        date_starts:
+            type: date
+            length: null
+    lifecycleCallbacks: {  }
