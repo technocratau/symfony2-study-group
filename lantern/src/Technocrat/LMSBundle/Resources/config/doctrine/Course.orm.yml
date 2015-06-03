@@ -1,6 +1,6 @@
 Technocrat\LMSBundle\Entity\Course:
     type: entity
-    table: null
+    table: courses
     repositoryClass: Technocrat\LMSBundle\Entity\CourseRepository
     id:
         id:

@@ -1,6 +1,6 @@
 Technocrat\LMSBundle\Entity\Unit:
     type: entity
-    table: null
+    table: units
     repositoryClass: Technocrat\LMSBundle\Entity\UnitRepository
     id:
         id:
