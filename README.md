@@ -1,1 +1,4 @@
-# symfony2-study-group
+# Technocrat symfony study group
+
+## Structure
+Branches represent symfony version
