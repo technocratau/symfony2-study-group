@@ -1,0 +1,15 @@
+Technocrat\LMSBundle\Entity\Course:
+    type: entity
+    table: null
+    repositoryClass: Technocrat\LMSBundle\Entity\CourseRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        name:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }
