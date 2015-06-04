@@ -29,6 +29,10 @@ class Unit
      */
     private $date_starts;
 
+    /**
+     * @var Course
+     */
+    private $course;
 
     /**
      * Get id

@@ -1,6 +1,12 @@
 Technocrat\LMSBundle\Entity\Unit:
     type: entity
     table: units
+    manyToOne:
+        course:
+            targetEntity: Course
+            joinColumn:
+                name: course_id
+                referencedColumnName: id
     repositoryClass: Technocrat\LMSBundle\Entity\UnitRepository
     id:
         id:
