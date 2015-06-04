@@ -1,6 +1,10 @@
 Technocrat\LMSBundle\Entity\Course:
     type: entity
     table: courses
+    oneToMany:
+        features:
+            targetEntity: Unit
+            mappedBy: course
     repositoryClass: Technocrat\LMSBundle\Entity\CourseRepository
     id:
         id:

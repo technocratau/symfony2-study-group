@@ -3,6 +3,7 @@
 namespace Technocrat\LMSBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * Course
@@ -19,6 +20,15 @@ class Course
      */
     private $name;
 
+    /**
+     * @var ArrayCollection
+     */
+    private $units;
+
+    public function __construct()
+    {
+        $this->units = new ArrayCollection();
+    }
 
     /**
      * Get id
