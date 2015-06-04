@@ -112,4 +112,27 @@ class Unit
     {
         return $this->date_starts;
     }
+
+    /**
+     * Set course
+     *
+     * @param \Technocrat\LMSBundle\Entity\Course $course
+     * @return Unit
+     */
+    public function setCourse(\Technocrat\LMSBundle\Entity\Course $course = null)
+    {
+        $this->course = $course;
+
+        return $this;
+    }
+
+    /**
+     * Get course
+     *
+     * @return \Technocrat\LMSBundle\Entity\Course 
+     */
+    public function getCourse()
+    {
+        return $this->course;
+    }
 }

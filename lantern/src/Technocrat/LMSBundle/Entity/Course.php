@@ -62,4 +62,37 @@ class Course
     {
         return $this->name;
     }
+
+    /**
+     * Add units
+     *
+     * @param \Technocrat\LMSBundle\Entity\Unit $units
+     * @return Course
+     */
+    public function addUnit(\Technocrat\LMSBundle\Entity\Unit $units)
+    {
+        $this->units[] = $units;
+
+        return $this;
+    }
+
+    /**
+     * Remove units
+     *
+     * @param \Technocrat\LMSBundle\Entity\Unit $units
+     */
+    public function removeUnit(\Technocrat\LMSBundle\Entity\Unit $units)
+    {
+        $this->units->removeElement($units);
+    }
+
+    /**
+     * Get units
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getUnits()
+    {
+        return $this->units;
+    }
 }
