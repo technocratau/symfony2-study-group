@@ -2,7 +2,7 @@ Technocrat\LMSBundle\Entity\Course:
     type: entity
     table: courses
     oneToMany:
-        features:
+        units:
             targetEntity: Unit
             mappedBy: course
     repositoryClass: Technocrat\LMSBundle\Entity\CourseRepository
