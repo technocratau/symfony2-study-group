@@ -19,3 +19,9 @@ php app/console doctrine:schema:update --force
 # Step 6.
 # 6.1 Add $units, constructor and OneToMany relationship to Course
 # 6.2 Add $course, ManyToOne and JoinColumn relationships to Unit
+php app/console doctrine:schema:update --force
+php app/console doctrine:generate:entities Technocrat
+
+# Step 7. Adding controllers
+php app/console doctrine:generate:crud --entity=TechnocratLMSBundle:Course
+php app/console doctrine:generate:crud --entity=TechnocratLMSBundle:Unit

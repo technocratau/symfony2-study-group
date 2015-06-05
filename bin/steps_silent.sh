@@ -21,3 +21,7 @@ php app/console doctrine:schema:update --force
 # 6.2 Add $course, ManyToOne and JoinColumn relationships to Unit
 php app/console doctrine:schema:update --force
 php app/console doctrine:generate:entities Technocrat
+
+# Step 7. Adding controllers
+php app/console doctrine:generate:crud --entity=TechnocratLMSBundle:Course --route-prefix=course --with-write --format=yml --no-interaction
+php app/console doctrine:generate:crud --entity=TechnocratLMSBundle:Unit --route-prefix=unit --with-write --format=yml --no-interaction

@@ -1,3 +1,11 @@
+technocrat_lms_unit:
+    resource: "@TechnocratLMSBundle/Resources/config/routing/unit.yml"
+    prefix:   /unit
+
+technocrat_lms_course:
+    resource: "@TechnocratLMSBundle/Resources/config/routing/course.yml"
+    prefix:   /course
+
 technocrat_lms_homepage:
     path:     /hello/{name}
     defaults: { _controller: TechnocratLMSBundle:Default:index }

@@ -1,0 +1,30 @@
+unit:
+    path:     /
+    defaults: { _controller: "TechnocratLMSBundle:Unit:index" }
+
+unit_show:
+    path:     /{id}/show
+    defaults: { _controller: "TechnocratLMSBundle:Unit:show" }
+
+unit_new:
+    path:     /new
+    defaults: { _controller: "TechnocratLMSBundle:Unit:new" }
+
+unit_create:
+    path:     /create
+    defaults: { _controller: "TechnocratLMSBundle:Unit:create" }
+    methods:  POST
+
+unit_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "TechnocratLMSBundle:Unit:edit" }
+
+unit_update:
+    path:     /{id}/update
+    defaults: { _controller: "TechnocratLMSBundle:Unit:update" }
+    methods:  [POST, PUT]
+
+unit_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "TechnocratLMSBundle:Unit:delete" }
+    methods:  [POST, DELETE]
