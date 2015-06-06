@@ -25,3 +25,5 @@ php app/console doctrine:generate:entities Technocrat
 # Step 7. Adding controllers
 php app/console doctrine:generate:crud --entity=TechnocratLMSBundle:Course --route-prefix=course --with-write --format=yml --no-interaction
 php app/console doctrine:generate:crud --entity=TechnocratLMSBundle:Unit --route-prefix=unit --with-write --format=yml --no-interaction
+
+# Step 8. Add __toString() to Course.php

@@ -95,4 +95,14 @@ class Course
     {
         return $this->units;
     }
+
+    /**
+     * Render unit as a string
+     *
+     * @return string
+     */
+    public function __toString()
+    {
+        return $this->getName();
+    }
 }
