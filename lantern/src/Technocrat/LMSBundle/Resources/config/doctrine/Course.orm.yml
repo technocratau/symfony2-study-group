@@ -5,6 +5,7 @@ Technocrat\LMSBundle\Entity\Course:
         units:
             targetEntity: Unit
             mappedBy: course
+            inversedBy: units
     repositoryClass: Technocrat\LMSBundle\Entity\CourseRepository
     id:
         id:

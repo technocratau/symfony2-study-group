@@ -4,6 +4,7 @@ Technocrat\LMSBundle\Entity\Unit:
     manyToOne:
         course:
             targetEntity: Course
+            inversedBy: units
             joinColumn:
                 name: course_id
                 referencedColumnName: id
