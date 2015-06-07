@@ -25,3 +25,6 @@ php app/console doctrine:generate:entities Technocrat
 # Step 7. Adding controllers
 php app/console doctrine:generate:crud --entity=TechnocratLMSBundle:Course
 php app/console doctrine:generate:crud --entity=TechnocratLMSBundle:Unit
+
+# Step 8. Add __toString() to Course.php
+# Step 9. Add validators to forms

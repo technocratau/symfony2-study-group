@@ -1,0 +1,7 @@
+# src/AppBundle/Resources/config/validation/Unit.yml
+Technocrat\LMSBundle\Entity\Unit:
+    properties:
+        number:
+            - Range:
+                min: 1
+                minMessage: "You need to specify unit's number 1 or higher."

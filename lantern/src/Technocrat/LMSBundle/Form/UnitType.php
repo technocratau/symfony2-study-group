@@ -17,8 +17,14 @@ class UnitType extends AbstractType
         $builder
             ->add('title')
             ->add('number')
-            ->add('date_starts')
-            ->add('course')
+            ->add('date_starts', 'date', array(
+                'years' => range(date('Y'), date('Y', strtotime('+5 years'))),
+                'required' => TRUE,
+                ))
+            ->add('course', 'entity', array(
+                'required' => TRUE,
+                'class' => 'TechnocratLMSBundle:Course',
+                ))
         ;
     }
     
