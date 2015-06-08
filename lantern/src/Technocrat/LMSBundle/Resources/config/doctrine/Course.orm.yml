@@ -5,7 +5,6 @@ Technocrat\LMSBundle\Entity\Course:
         units:
             targetEntity: Unit
             mappedBy: course
-            inversedBy: units
     repositoryClass: Technocrat\LMSBundle\Entity\CourseRepository
     id:
         id:
@@ -17,4 +16,8 @@ Technocrat\LMSBundle\Entity\Course:
         name:
             type: string
             length: 255
+        cover:
+            type: string
+            length: 255
+            nullable: true
     lifecycleCallbacks: {  }

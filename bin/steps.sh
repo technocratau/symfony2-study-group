@@ -28,3 +28,5 @@ php app/console doctrine:generate:crud --entity=TechnocratLMSBundle:Unit
 
 # Step 8. Add __toString() to Course.php
 # Step 9. Add validators to forms
+# Step 10. Adding cover field
+

@@ -16,6 +16,7 @@ class CourseType extends AbstractType
     {
         $builder
             ->add('name')
+            ->add('cover')
         ;
     }
     
