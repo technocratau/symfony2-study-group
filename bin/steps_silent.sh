@@ -27,3 +27,5 @@ php app/console doctrine:generate:crud --entity=TechnocratLMSBundle:Course --rou
 php app/console doctrine:generate:crud --entity=TechnocratLMSBundle:Unit --route-prefix=unit --with-write --format=yml --no-interaction
 
 # Step 8. Add __toString() to Course.php
+# Step 9. Add validators to forms
+
