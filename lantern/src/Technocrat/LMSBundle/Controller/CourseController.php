@@ -40,6 +40,7 @@ class CourseController extends Controller
         $form->handleRequest($request);
 
         if ($form->isValid()) {
+            $entity->upload();
             $em = $this->getDoctrine()->getManager();
             $em->persist($entity);
             $em->flush();
@@ -170,6 +171,7 @@ class CourseController extends Controller
         $editForm->handleRequest($request);
 
         if ($editForm->isValid()) {
+            $entity->upload();
             $em->flush();
 
             return $this->redirect($this->generateUrl('course_edit', array('id' => $id)));

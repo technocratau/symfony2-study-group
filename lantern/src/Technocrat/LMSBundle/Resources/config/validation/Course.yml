@@ -1,0 +1,6 @@
+# src/AppBundle/Resources/config/validation/Course.yml
+Technocrat\LMSBundle\Entity\Course:
+    properties:
+       file:
+            - File:
+                maxSize: 1M

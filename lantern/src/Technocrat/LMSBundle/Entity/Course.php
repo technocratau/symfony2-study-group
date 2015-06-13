@@ -133,4 +133,101 @@ class Course
     {
         return $this->getName();
     }
+
+    /**
+     * Get web path to upload directory
+     *
+     * @return string
+     *  Relative path
+     */
+    protected function getUploadPath()
+    {
+        return 'uploads/course/covers';
+    }
+
+    /**
+     * Get absolute path to upload directory
+     *
+     * @return string
+     *  Absolute path
+     */
+    protected function getUploadAbsolutePath()
+    {
+        return __DIR__ . '/../../../../web/' . $this->getUploadPath();
+    }
+
+    /**
+     * Get web path to a cover.
+     *
+     * @return null|string
+     *  Relative path.
+     */
+    public function getCoverWeb()
+    {
+        return NULL === $this->getCover()
+            ? NULL
+            : $this->getUploadPath() . '/' . $this->getCover();
+    }
+
+    /**
+     * Get path on disk to a cover.
+     *
+     * @return null|string
+     *  Relative path.
+     */
+    public function getCoverAbsolute()
+    {
+        return NULL === $this->getCover()
+            ? NULL
+            : $this->getUploadAbsolutePath() . '/' . $this->getCover();
+    }
+
+    /**
+     * @var UploadedFile
+     */
+    private $file;
+
+    /**
+     * Get file
+     *
+     * @return UploadedFile 
+     */
+    public function getFile()
+    {
+        return $this->file;
+    }
+
+    /**
+     * Set file
+     *
+     * @param Symfony\Component\HttpFoundation\File\UploadedFile $file
+     * @return Unit
+     */
+    public function setFile($file)
+    {
+        $this->file = $file;
+    }
+
+    /**
+     * Upload the cover file.
+     */
+    public function upload()
+    {
+        // File property can be empty.
+        if (NULL === $this->getFile()) {
+            return;
+        }
+
+        $filename = $this->getFile()->getClientOriginalName();
+
+        // Move uploaded file to a target directory.
+        $this->getFile()->move(
+            $this->getUploadAbsolutePath(),
+            $filename);
+
+        // Set the cover.
+        $this->setCover($filename);
+
+        $this->setFile(NULL);
+    }
 }
