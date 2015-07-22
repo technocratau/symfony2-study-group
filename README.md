@@ -60,3 +60,45 @@ Enabling the bundle inside the Kernel: OK
 Confirm automatic update of the Routing [yes]? yes
 Importing the bundle routing resource: OK
 ```
+
+#### 3. Disable local check and modify twig template
+Disable the following code in
+```sh
+lantern/web/app_dev.php
+```
+to prevent local checks
+```sh
+if (isset($_SERVER['HTTP_CLIENT_IP'])
+    || isset($_SERVER['HTTP_X_FORWARDED_FOR'])
+    || !(in_array(@$_SERVER['REMOTE_ADDR'], array('127.0.0.1', 'fe80::1', '::1')) || php_sapi_name() === 'cli-server')
+) {
+    header('HTTP/1.0 403 Forbidden');
+    exit('You are not allowed to access this file. Check '.basename(__FILE__).' for more information.');
+}
+```
+and in
+```sh
+lantern/web/config.php
+```
+to prevent local checks
+```sh
+if (!in_array(@$_SERVER['REMOTE_ADDR'], array(
+    '127.0.0.1',
+    '::1',
+))) {
+    header('HTTP/1.0 403 Forbidden');
+    exit('This script is only accessible from localhost.');
+}
+```
+Change in
+```sh
+lantern/src/Technocrat/LMSBundle/Resources/views/Default/index.html.twig
+```
+from
+```sh
+Hello {{ name }}!
+```
+to
+```sh
+Hello, {{ name | capitalize }}!
+```
